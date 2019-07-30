@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lanchonete.controller.cadastrarFuncionarioController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="810.0">
+         <children>
+            <AnchorPane prefHeight="450.0" prefWidth="800.0">
+               <children>
+                  <TextField fx:id="tfSenhaFuncionario" layoutX="231.0" layoutY="378.0" prefHeight="25.0" prefWidth="391.0" promptText="Senha do usuário" />
+                  <TextField fx:id="tfEmailFuncionario" layoutX="232.0" layoutY="112.0" prefHeight="25.0" prefWidth="391.0" promptText="Email para contato" />
+                  <TextField fx:id="tfIdentificadorFuncionario" layoutX="232.0" layoutY="143.0" prefHeight="25.0" prefWidth="391.0" promptText="CPF / CNPJ" />
+                  <TextField fx:id="tfTelefoneFuncionario" layoutX="231.0" layoutY="175.0" prefHeight="25.0" prefWidth="391.0" promptText="Telefone / Celular" />
+                  <TextField fx:id="tfUsuarioFuncionario" layoutX="231.0" layoutY="347.0" prefHeight="25.0" prefWidth="391.0" promptText="Nome do usuário" />
+                  <TextField fx:id="tfCodigo" editable="false" layoutX="231.0" layoutY="45.0" prefHeight="25.0" prefWidth="103.0" promptText="Código" />
+                  <Button fx:id="btnSalvar" layoutX="231.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnSalvarOnAction" prefHeight="25.0" prefWidth="89.0" text="Salvar" />
+                  <TextField fx:id="tfNomeFuncionario" layoutX="232.0" layoutY="81.0" prefHeight="25.0" prefWidth="391.0" promptText="Nome completo verdadeiro" />
+                  <Button fx:id="btnCriarAtendente" layoutX="231.0" layoutY="14.0" mnemonicParsing="false" onAction="#btncCriarAtendenteOnAction" text="Criar nova conta" />
+                  <CheckBox fx:id="cbGerente" layoutX="364.0" layoutY="49.0" mnemonicParsing="false" onAction="#cbGerenteOnAction" text="Gerente" />
+                  <CheckBox fx:id="cbVendedor" layoutX="470.0" layoutY="49.0" mnemonicParsing="false" onAction="#cbVendedorOnAction" text="Vendedor" />
+                  <TextField fx:id="tfEnderecoFuncionario" layoutX="231.0" layoutY="213.0" prefHeight="25.0" prefWidth="391.0" promptText="Endereço" />
+                  <TextField fx:id="tfCidadeFuncionario" layoutX="231.0" layoutY="246.0" prefHeight="25.0" prefWidth="391.0" promptText="Cidade" />
+                  <TextField fx:id="tfEstadoFuncionario" layoutX="231.0" layoutY="281.0" prefHeight="25.0" prefWidth="391.0" promptText="Estado" />
+                  <TextField fx:id="tfPaisFuncionario" layoutX="231.0" layoutY="316.0" prefHeight="25.0" prefWidth="391.0" promptText="País" />
+                  <Text layoutX="147.0" layoutY="192.0" opacity="0.55" strokeType="OUTSIDE" strokeWidth="0.0" text="11 caracteres" wrappingWidth="71.359375" />
+                  <Text layoutX="147.0" layoutY="160.0" opacity="0.55" strokeType="OUTSIDE" strokeWidth="0.0" text="11 caracteres" wrappingWidth="71.359375" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

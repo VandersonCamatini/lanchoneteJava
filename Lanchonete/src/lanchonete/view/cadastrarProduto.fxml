@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lanchonete.controller.cadastrarProdutoController">
+   <children>
+      <AnchorPane prefHeight="470.0" prefWidth="820.0">
+         <children>
+            <TextField fx:id="tfMarcaProduto" layoutX="232.0" layoutY="158.0" prefHeight="25.0" prefWidth="391.0" promptText="Marca" />
+            <TextField fx:id="tfPrecoCompra" layoutX="232.0" layoutY="210.0" prefHeight="25.0" prefWidth="391.0" promptText="Preço de compra" />
+            <TextField fx:id="tfCodigo" editable="false" layoutX="231.0" layoutY="63.0" prefHeight="25.0" prefWidth="103.0" promptText="Código" />
+            <Button fx:id="btnSalvar" layoutX="231.0" layoutY="382.0" mnemonicParsing="false" onAction="#btnSalvarOnAction" prefHeight="25.0" prefWidth="89.0" text="Salvar" />
+            <TextField fx:id="tfNomeProduto" layoutX="232.0" layoutY="110.0" prefHeight="25.0" prefWidth="391.0" promptText="Nome do produto" />
+            <Button fx:id="btnCriarProduto" layoutX="231.0" layoutY="23.0" mnemonicParsing="false" onAction="#btncCriarProdutoOnAction" text="Criar novo produto" />
+            <TextField fx:id="tfPrecoVenda" layoutX="232.0" layoutY="265.0" prefHeight="25.0" prefWidth="391.0" promptText="Preço  de venda" />
+            <TextField fx:id="tfQuantidadeProduto" layoutX="232.0" layoutY="321.0" prefHeight="25.0" prefWidth="391.0" promptText="Quantidade" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

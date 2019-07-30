@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paneVenda" prefHeight="448.0" prefWidth="605.0" styleClass="pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lanchonete.controller.cadastrarVendaController">
+   <children>
+      <ComboBox fx:id="comboProduto" editable="true" layoutX="48.0" layoutY="133.0" prefHeight="25.0" prefWidth="265.0" promptText="Produto" />
+      <ComboBox fx:id="comboCliente" editable="true" layoutX="47.0" layoutY="91.0" prefHeight="25.0" prefWidth="265.0" promptText="Cliente" />
+      <Button fx:id="btnSalvarItem" layoutX="390.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnSalvarItemOnAction" prefHeight="31.0" prefWidth="105.0" text="Salvar produto">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtQtdProduto" layoutX="321.0" layoutY="131.0" prefHeight="29.0" prefWidth="53.0" promptText="Qtd" />
+      <Button fx:id="btnFinalizarCompra" layoutX="254.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnFinalizarCompraOnAction" prefHeight="50.0" prefWidth="105.0" text="Finalizar &#10;Compra" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableItems" layoutX="48.0" layoutY="175.0" prefHeight="134.0" prefWidth="399.0">
+         <columns>
+            <TableColumn fx:id="tblColumnProduto" prefWidth="270.0" text="Produto">
+               <cellValueFactory>
+                  <PropertyValueFactory property="codigoProduto" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="51.0" text="Qtd">
+               <cellValueFactory>
+                  <PropertyValueFactory property="qntdComprada" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="77.0" text="Valor">
+               <cellValueFactory>
+                  <PropertyValueFactory property="valorTotal" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Button fx:id="btnAdicionarItem" alignment="TOP_CENTER" layoutX="501.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnAdicionarItemOnAction" prefHeight="31.0" prefWidth="90.0" text="+ Produto">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCancelarAcao" layoutX="374.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnCancelarAcaoOnAction" prefHeight="50.0" prefWidth="137.0" styleClass="button2" text="Cancelar compra">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtValorTotal" editable="false" focusTraversable="false" layoutX="48.0" layoutY="346.0" prefHeight="29.0" prefWidth="190.0" promptText="Valor R$:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnCadastrarVenda" alignment="CENTER" layoutX="47.0" layoutY="14.0" minHeight="31.0" minWidth="98.0" mnemonicParsing="false" onAction="#btnCadastrarVendaOnAction" prefHeight="31.0" prefWidth="157.0" text="Criar nova venda" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CheckBox fx:id="cbPedido" layoutX="48.0" layoutY="63.0" mnemonicParsing="false" onAction="#cbPedidoOnaction" text="Pedido">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cbReserva" layoutX="126.0" layoutY="63.0" mnemonicParsing="false" onAction="#cbReservaOnAction" text="Reserva">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

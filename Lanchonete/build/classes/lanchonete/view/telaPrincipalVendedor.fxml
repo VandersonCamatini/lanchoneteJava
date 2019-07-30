@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lanchonete.controller.telaPrincipalVendedorController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="754.0">
+         <children>
+            <TabPane fx:id="tbpJanelas" prefHeight="500.0" prefWidth="744.0" tabClosingPolicy="ALL_TABS">
+               <tabs>
+                  <Tab closable="false" text="Tela Inicial">
+                     <content>
+                        <AnchorPane accessibleRole="BUTTON" blendMode="SRC_ATOP" minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="744.0">
+                           <children>
+                              <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="744.0">
+                                 <menus>
+                                    <Menu mnemonicParsing="false" text="CADASTRAR">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#clienteOnAction" text="Cliente" />
+                                       </items>
+                                    </Menu>
+                                    <Menu fx:id="btnVendas" mnemonicParsing="false" text="VENDAS">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#vendasOnAction" text="Todas as vendas" />
+                                       </items>
+                                    </Menu>
+                                 </menus>
+                              </MenuBar>
+                              <TableView fx:id="tbReservas" blendMode="SCREEN" layoutX="26.0" layoutY="106.0" prefHeight="227.0" prefWidth="690.0">
+                                 <columns>
+                                    <TableColumn fx:id="tbcCliente" prefWidth="153.0" text="Cliente">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="codigoCliente" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tbcData" prefWidth="100.0" text="Data">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="dataEmissao" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tbcHora" prefWidth="139.0" text="Hora">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="hora" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tbcNumeroDoCliente" minWidth="0.0" prefWidth="167.0" text="Número Do cliente">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="codigoCliente" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tbcValor" minWidth="0.0" prefWidth="129.0" text="Valor">
+                                       <cellValueFactory>
+                                          <PropertyValueFactory property="valorCompra" />
+                                       </cellValueFactory>
+                                    </TableColumn>
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="tfPesquisar" layoutX="157.0" layoutY="75.0" onKeyReleased="#ENTER" prefHeight="25.0" prefWidth="559.0" />
+                              <Text layoutX="35.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESERVAS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
